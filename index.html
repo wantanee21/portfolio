@@ -1,112 +1,120 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Share | ข่าวสารเทคโนโลยี</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Sharing Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
-📱 Tech News
-</div>
+<h1>📄 Document Sharing Portfolio</h1>
 
-<nav>
-
-<a href="#">หน้าแรก</a>
-<a href="#">ข่าวล่าสุด</a>
-<a href="#">เทคโนโลยี</a>
-<a href="#">ติดต่อ</a>
-
-</nav>
+<p>แบ่งปันข้อมูลเชิงเอกสารเกี่ยวกับข่าวเทคโนโลยี</p>
 
 </header>
 
+<nav>
 
-<section class="hero">
+<a href="#about">เกี่ยวกับ</a>
 
-<h1>📰 ข่าวเทคโนโลยีล่าสุด</h1>
+<a href="#document">เอกสาร</a>
 
-<p>อัปเดตข่าวสารทุกวัน</p>
+<a href="#download">ดาวน์โหลด</a>
 
-</section>
+<a href="#reference">อ้างอิง</a>
 
+<a href="#contact">ติดต่อ</a>
 
-<section class="news">
+</nav>
 
-<div class="card">
+<section id="about">
 
-<img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800" alt="iphone">
-
-<h2>📱 iPhone มีแนวโน้มปรับราคาสูงขึ้น</h2>
-
-<p class="date">
-อัปเดต :
-<span id="today"></span>
-</p>
+<h2>เกี่ยวกับเว็บไซต์</h2>
 
 <p>
 
-นักวิเคราะห์หลายฝ่ายคาดการณ์ว่า iPhone รุ่นใหม่อาจมีการปรับราคาสูงขึ้น
-เนื่องจากต้นทุนการผลิต ค่าแรง และชิ้นส่วนอิเล็กทรอนิกส์ที่เพิ่มขึ้น
+เว็บไซต์นี้จัดทำขึ้นเพื่อแบ่งปันข้อมูลเชิงเอกสารเกี่ยวกับข่าว
+<strong>iPhone ราคาปรับสูงขึ้น</strong>
+
+โดยรวบรวมข้อมูลสำคัญไว้ในรูปแบบที่อ่านง่าย
+และสามารถนำไปใช้ศึกษาต่อได้
+
+</p>
+
+</section>
+
+<section id="document">
+
+<h2>📄 เอกสารข่าว</h2>
+
+<div class="card">
+
+<h3>iPhone ราคาปรับสูงขึ้น</h3>
+
+<p>
+
+มีการคาดการณ์ว่าราคา iPhone รุ่นใหม่อาจปรับตัวสูงขึ้น
+จากต้นทุนการผลิตและชิ้นส่วนที่เพิ่มขึ้น
 ผู้บริโภคควรติดตามข้อมูลจาก Apple อย่างเป็นทางการก่อนตัดสินใจซื้อ
 
 </p>
 
-<button>อ่านเพิ่มเติม</button>
+</div>
+
+</section>
+
+<section id="download">
+
+<h2>📥 ดาวน์โหลดเอกสาร</h2>
+
+<div class="card">
+
+<p>📄 สรุปข่าว iPhone ราคาปรับสูงขึ้น (PDF)</p>
+
+<button>ดาวน์โหลด</button>
 
 </div>
 
 </section>
 
+<section id="reference">
 
-<section class="more-news">
+<h2>📚 แหล่งอ้างอิง</h2>
 
-<h2>ข่าวอื่น ๆ</h2>
+<ul>
 
-<div class="grid">
+<li>Apple Newsroom</li>
 
-<div class="small-card">
+<li>เว็บไซต์ข่าวเทคโนโลยี</li>
 
-<h3>💻 MacBook รุ่นใหม่</h3>
+<li>บทวิเคราะห์ตลาดสมาร์ตโฟน</li>
 
-<p>คาดว่าจะใช้ชิปที่เร็วขึ้นและประหยัดพลังงานกว่าเดิม</p>
-
-</div>
-
-<div class="small-card">
-
-<h3>⌚ Apple Watch</h3>
-
-<p>เตรียมเพิ่มฟีเจอร์ด้านสุขภาพและ AI มากขึ้น</p>
-
-</div>
-
-<div class="small-card">
-
-<h3>🎧 AirPods</h3>
-
-<p>มีข่าวลือว่าจะเพิ่มระบบแปลภาษาแบบเรียลไทม์</p>
-
-</div>
-
-</div>
+</ul>
 
 </section>
 
+<section id="contact">
+
+<h2>📧 ติดต่อ</h2>
+
+<p>Email : s34551@banbung.ac.th</p>
+
+</section>
 
 <footer>
 
-<p>© 2026 Tech News | เว็บไซต์ตัวอย่างเพื่อการศึกษา</p>
+<p id="year"></p>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
