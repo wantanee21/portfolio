@@ -1,93 +1,46 @@
-// ================================
-// แสดงวันที่ปัจจุบัน
-// ================================
+// แสดงปีปัจจุบัน
 
-const today = document.getElementById("today");
+document.getElementById("year").innerHTML =
+"© " + new Date().getFullYear() +
+" Document Sharing Portfolio | จัดทำเพื่อการศึกษา";
 
-const options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
+
+// ปุ่มดาวน์โหลด
+
+const button = document.querySelector("button");
+
+button.addEventListener("click",function(){
+
+    alert("ตัวอย่างเว็บไซต์แบ่งปันเอกสาร\n(สามารถเปลี่ยนเป็นไฟล์ PDF จริงได้)");
+
+});
+
+
+// ข้อความต้อนรับ
+
+window.onload = function(){
+
+    console.log("ยินดีต้อนรับสู่เว็บไซต์แบ่งปันข้อมูลเชิงเอกสาร");
+
 };
 
-today.textContent = new Date().toLocaleDateString("th-TH", options);
 
+// เอฟเฟกต์การ์ด
 
-// ================================
-// ข้อความต้อนรับ
-// ================================
+const cards = document.querySelectorAll(".card");
 
-window.addEventListener("load", () => {
+cards.forEach(card=>{
 
-    console.log("ยินดีต้อนรับสู่ Tech News");
+card.addEventListener("mouseover",()=>{
 
-});
-
-
-// ================================
-// ปุ่มอ่านเพิ่มเติม
-// ================================
-
-const btn = document.querySelector("button");
-
-btn.addEventListener("click", () => {
-
-    alert("เว็บไซต์นี้เป็นตัวอย่างสำหรับแบ่งปันข่าวสารเทคโนโลยี 📱");
+card.style.transform="translateY(-8px)";
 
 });
 
+card.addEventListener("mouseout",()=>{
 
-// ================================
-// เอฟเฟกต์การ์ดข่าว
-// ================================
-
-const card = document.querySelector(".card");
-
-card.addEventListener("mouseenter", () => {
-
-    card.style.transform = "translateY(-10px)";
+card.style.transform="translateY(0px)";
 
 });
 
-card.addEventListener("mouseleave", () => {
-
-    card.style.transform = "translateY(0px)";
-
 });
-
-
-// ================================
-// เปลี่ยนสีหัวข้อเมื่อคลิก
-// ================================
-
-const title = document.querySelector(".hero h1");
-
-title.addEventListener("click", () => {
-
-    title.style.color = "#ff4fa2";
-
-});
-
-
-// ================================
-// แสดงเวลาปัจจุบัน
-// ================================
-
-const footer = document.querySelector("footer");
-
-const clock = document.createElement("p");
-
-footer.appendChild(clock);
-
-function updateClock() {
-
-    const now = new Date();
-
-    clock.innerHTML =
-        "🕒 เวลา " + now.toLocaleTimeString("th-TH");
-
-}
-
-updateClock();
-
-setInterval(updateClock,1000);
