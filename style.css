@@ -1,157 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap');
+/* ==========================
+   Princess Pink Theme
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Prompt',sans-serif;
+    font-family:'Quicksand',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:linear-gradient(135deg,#FFE8F5,#F2E8FF,#E8F6FF);
-    color:#444;
+    background:linear-gradient(180deg,#fff8fc,#ffe7f4,#ffd9ec);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#5b4a5f;
+    position:relative;
 }
 
-/* Header */
+/* ---------- ดาวสีชมพู ---------- */
 
-header{
-    background:linear-gradient(135deg,#FF9CCF,#D5B8FF,#A9E4FF);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-    border-bottom-left-radius:35px;
-    border-bottom-right-radius:35px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
+.star{
+    position:fixed;
+    top:-20px;
+    color:#ff8fc4;
+    user-select:none;
+    pointer-events:none;
+    animation:fall linear infinite;
+    opacity:.9;
+    text-shadow:
+        0 0 8px #ffc9e6,
+        0 0 18px #ff9dcb;
 }
 
-header h1{
-    font-size:42px;
+@keyframes fall{
+    0%{
+        transform:translateY(-30px) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
 }
 
-header p{
-    margin-top:10px;
-    font-size:18px;
+/* ---------- กล่องหลัก ---------- */
+
+.container{
+    width:min(1100px,90%);
+    margin:70px auto;
+    padding:40px;
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(18px);
+    border-radius:35px;
+    border:2px solid rgba(255,255,255,.7);
+    box-shadow:
+        0 15px 40px rgba(255,145,196,.25),
+        inset 0 0 20px rgba(255,255,255,.5);
 }
 
-/* เมนู */
-
-nav{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    margin:30px 0;
-}
-
-nav a{
-    text-decoration:none;
-    color:white;
-    background:#ff75b5;
-    padding:12px 24px;
-    border-radius:30px;
-    transition:.3s;
-}
-
-nav a:hover{
-    background:#b777ff;
-}
-
-/* Section */
-
-section{
-    width:90%;
-    max-width:1000px;
-    margin:30px auto;
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(10px);
-    border-radius:25px;
-    padding:30px;
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
-}
-
-h2{
-    color:#ff4fa2;
-    margin-bottom:15px;
-    border-left:8px solid #7dd3fc;
-    padding-left:12px;
-}
-
-p{
-    line-height:1.8;
-}
-
-/* Card */
+/* ---------- Card ---------- */
 
 .card{
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    margin-top:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-/* ปุ่ม */
-
-button{
-    margin-top:15px;
-    background:linear-gradient(135deg,#ff75b5,#b777ff);
-    color:white;
-    border:none;
-    padding:12px 25px;
+    background:rgba(255,255,255,.7);
     border-radius:30px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.05);
-}
-
-/* รายการ */
-
-ul{
-    padding-left:20px;
-}
-
-li{
-    margin:10px 0;
-}
-
-/* Footer */
-
-footer{
-    margin-top:40px;
-    background:linear-gradient(135deg,#FF9CCF,#D5B8FF,#A9E4FF);
-    color:white;
-    text-align:center;
     padding:25px;
-}
-
-/* Responsive */
-
-@media(max-width:768px){
-
-header h1{
-    font-size:30px;
-}
-
-nav{
-    flex-direction:column;
-    align-items:center;
-}
-
-nav a{
-    width:220px;
-    text-align:center;
-}
-
-section{
-    width:95%;
-}
-
-}
